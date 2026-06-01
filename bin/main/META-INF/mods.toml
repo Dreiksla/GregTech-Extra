@@ -1,0 +1,45 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="LGPL-3.0 license"
+
+[[mods]]
+modId="gtextra"
+version="1.0.0"
+displayName="GregTech Modern: Extra"
+authors="Dreiksla"
+description="A mod that adds new multiblocks, machines and materials to GregTech Modern"
+
+[[dependencies.gtextra]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.gtextra]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.gtextra]]
+    modId="gtceu"
+    mandatory=true
+    versionRange="[7.5.3]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.gtextra]]
+    modId="configuration"
+    mandatory=true
+    versionRange="[2.2.0]"
+    ordering = "AFTER"
+    side = "BOTH"
+
+[[dependencies.gtextra]]
+    modId="ae2"
+    mandatory=true
+    versionRange="[15.4.10]"
+    ordering = "AFTER"
+    side = "BOTH"
