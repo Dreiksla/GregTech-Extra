@@ -2,8 +2,8 @@ Manifest-Version: 1.0
 Specification-Title: gtextra
 Specification-Vendor: Dreiksla
 Specification-Version: 1
-Implementation-Title: GregTechExtra
+Implementation-Title: GregTechExtra(Copy)
 Implementation-Version: 1.0.0
 Implementation-Vendor: Dreiksla
-Implementation-Timestamp: 2026-05-31T22:37:30+0000
+Implementation-Timestamp: 2026-06-01T03:15:35+0000
 
