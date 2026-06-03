@@ -10,10 +10,11 @@ import com.lowdragmc.lowdraglib.gui.texture.ProgressTexture.FillDirection;
 import static com.gregtechceu.gtceu.common.data.GTRecipeTypes.register;
 
 public class GTExtraRecipeTypes {
+    
     public static void init() {}
 
     public static final GTRecipeType GREENHOUSE = register("greenhouse", GTRecipeTypes.MULTIBLOCK)
-            .setMaxIOSize(2, 0, 2, 0)
+            .setMaxIOSize(2, 2, 0, 0)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
             .setEUIO(IO.IN)
             .setSound(GTSoundEntries.ASSEMBLER);

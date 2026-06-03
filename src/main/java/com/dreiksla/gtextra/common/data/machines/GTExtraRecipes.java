@@ -5,6 +5,8 @@ import java.util.function.Consumer;
 import com.dreiksla.gtextra.GTExtra;
 import com.dreiksla.gtextra.common.data.materials.GTExtraMaterials;
 import com.gregtechceu.gtceu.api.GTValues;
+import com.gregtechceu.gtceu.api.data.chemical.ChemicalHelper;
+import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.gregtechceu.gtceu.common.data.*;
 import com.gregtechceu.gtceu.common.data.machines.GTMultiMachines;
 import com.gregtechceu.gtceu.data.recipe.CustomTags;
@@ -46,6 +48,16 @@ public class GTExtraRecipes {
         .inputFluids(GTMaterials.Polybenzimidazole.getFluid(250))
         .outputFluids(GTExtraMaterials.Polytetrafluoroethylenebenzimadole.getFluid(750))
         .EUt(GTValues.VA[GTValues.LuV])
+        .save(provider);
+
+        GTRecipeTypes.ASSEMBLER_RECIPES.recipeBuilder(GTExtra.id("greenhouse"))
+        .inputItems(ChemicalHelper.get(TagPrefix.gear, GTMaterials.Steel), 4)
+        .inputItems(ChemicalHelper.get(TagPrefix.cableGtSingle, GTMaterials.Steel), 4)
+        .inputItems(CustomTags.LV_CIRCUITS, 4)
+        .inputItems(GTBlocks.MACHINE_CASING_LV, 2)
+        .outputItems(GTExtraMultiMachines.GREENHOUSE.asStack(), 1)
+        .EUt(GTValues.VA[GTValues.LV])
+        .duration(1000)
         .save(provider);
     }
 }

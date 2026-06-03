@@ -22,9 +22,13 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 @Mod(GTExtra.MOD_ID)
 public class GTExtra {
     public static final String MOD_ID = "gtextra";
+    public static final Logger LOGGER = LogManager.getLogger();
     public static GTRegistrate REGISTRATE = GTRegistrate.create(GTExtra.MOD_ID);
 
     public GTExtra() {

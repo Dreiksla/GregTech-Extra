@@ -6,6 +6,7 @@ import com.dreiksla.gtextra.common.data.GTExtraRecipeTypes;
 import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.data.RotationState;
 import com.gregtechceu.gtceu.api.machine.MultiblockMachineDefinition;
+import com.gregtechceu.gtceu.api.machine.multiblock.PartAbility;
 import com.gregtechceu.gtceu.api.machine.multiblock.WorkableElectricMultiblockMachine;
 import com.gregtechceu.gtceu.api.pattern.FactoryBlockPattern;
 import com.gregtechceu.gtceu.api.pattern.Predicates;
@@ -18,11 +19,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.level.block.Blocks;
 
 public class GTExtraMultiMachines {
+
     public static final MultiblockMachineDefinition MEGA_CHEMICAL_REACTOR = GTExtra.REGISTRATE
     .multiblock("mega_chemical_reactor", (holder) -> new WorkableElectricMultiblockMachine(holder))
     .tooltips(Component.literal("§6Recipes: Large Chemical Reactor and Chemical Reactor"))
     .tooltips(Component.literal("§6Supports Batch Mode"))
     .tooltips(Component.literal("§6Overclock: OC Perfect Subtick"))
+    .tooltips(Component.literal("§6Supports PCH"))
     .rotationState(RotationState.ALL)
     .recipeTypes(GTRecipeTypes.LARGE_CHEMICAL_RECIPES, GTRecipeTypes.CHEMICAL_RECIPES)
     .recipeModifiers(
@@ -75,7 +78,10 @@ public class GTExtraMultiMachines {
         .aisle("abbbbbbbbba", "aabdddddbaa", "aabdddddbaa", "aabdddddbaa", "aabdddddbaa", "aabdddddbaa", "aabdddddbaa", "abbbbbbbbba", "aaaaaaaaaaa", "aaaaaaaaaaa")
         .aisle("aabbbgbbbaa", "aaaaaaaaaaa", "aaaaaaaaaaa", "aaaaaaaaaaa", "aaaaaaaaaaa", "aaaaaaaaaaa", "aaaaaaaaaaa", "aabbbbbbbaa", "aaaaaaaaaaa", "aaaaaaaaaac")
         .where("a", Predicates.any())
-        .where("b", Predicates.blocks(GTBlocks.CASING_STEEL_SOLID.get()))
+        .where("b", Predicates.blocks(GTBlocks.CASING_STEEL_SOLID.get())
+            .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setPreviewCount(1))
+            .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setPreviewCount(1))
+            .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setPreviewCount(1)))
         .where("c", Predicates.any())
         .where("d", Predicates.blocks(GTBlocks.CASING_TEMPERED_GLASS.get()))
         .where("e", Predicates.blocks(Blocks.GRASS_BLOCK))
