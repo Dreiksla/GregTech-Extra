@@ -27,8 +27,6 @@ description="A mod that adds new multiblocks, machines and materials to GregTech
     modId="gtceu"
     mandatory=true
     versionRange="[7.5.3]"
-    ordering="NONE"
-    side="BOTH"
 
 [[dependencies.gtextra]]
     modId="configuration"

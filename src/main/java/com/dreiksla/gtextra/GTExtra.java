@@ -3,6 +3,7 @@ package com.dreiksla.gtextra;
 import com.dreiksla.gtextra.blocks.GTExtraModBlocks;
 import com.dreiksla.gtextra.common.data.GTExtraRecipeTypes;
 import com.dreiksla.gtextra.common.data.ModCreativeModeTabs;
+import com.dreiksla.gtextra.common.data.machines.GTExtraAEMachines;
 import com.dreiksla.gtextra.common.data.machines.GTExtraMultiMachines;
 import com.dreiksla.gtextra.common.data.materials.GTExtraMaterials;
 import com.dreiksla.gtextra.items.GTExtraModItems;
@@ -75,5 +76,6 @@ public class GTExtra {
 
     private void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
         GTExtraMultiMachines.init();
+        GTExtraAEMachines.init();
     }
 }

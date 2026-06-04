@@ -1,6 +1,7 @@
 {
-  "creativetab.gtextra.tab": "GregTech Modern: Extra",
+  "creativetab.gtextra_tab": "GregTech Modern: Extra",
   "block.gtextra.mega_chemical_reactor": "Mega Chemical Reactor",
   "block.gtextra.greenhouse": "Greenhouse",
+  "block.gtextra.me_super_pattern_buffer": "ME Super Pattern Buffer",
   "material.gtextra.polytetrafluoroethylenebenzimadole": "Polytetrafluoroethylenebenzimadole"
 }

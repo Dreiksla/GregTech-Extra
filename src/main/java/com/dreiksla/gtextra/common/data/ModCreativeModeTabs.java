@@ -3,6 +3,7 @@ package com.dreiksla.gtextra.common.data;
 import net.minecraftforge.eventbus.api.IEventBus;
 
 import com.dreiksla.gtextra.GTExtra;
+import com.dreiksla.gtextra.common.data.machines.GTExtraAEMachines;
 import com.dreiksla.gtextra.common.data.machines.GTExtraMultiMachines;
 
 import net.minecraft.core.registries.Registries;
@@ -24,6 +25,7 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(GTExtraMultiMachines.MEGA_CHEMICAL_REACTOR.asStack());
                         pOutput.accept(GTExtraMultiMachines.GREENHOUSE.asStack());
+                        pOutput.accept(GTExtraAEMachines.ME_SUPER_PATTERN_BUFFER.asStack());
                     })
                     .build());
 

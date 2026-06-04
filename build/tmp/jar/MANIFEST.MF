@@ -5,5 +5,5 @@ Specification-Version: 1
 Implementation-Title: GregTechExtra(Copy)
 Implementation-Version: 1.0.0
 Implementation-Vendor: Dreiksla
-Implementation-Timestamp: 2026-06-03T17:41:24+0000
+Implementation-Timestamp: 2026-06-04T03:10:54+0000
 

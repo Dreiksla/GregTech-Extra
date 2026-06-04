@@ -8,6 +8,7 @@ import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.gregtechceu.gtceu.common.data.*;
+import com.gregtechceu.gtceu.common.data.machines.GTAEMachines;
 import com.gregtechceu.gtceu.common.data.machines.GTMultiMachines;
 import com.gregtechceu.gtceu.data.recipe.CustomTags;
 
@@ -58,6 +59,21 @@ public class GTExtraRecipes {
         .outputItems(GTExtraMultiMachines.GREENHOUSE.asStack(), 1)
         .EUt(GTValues.VA[GTValues.LV])
         .duration(1000)
+        .save(provider);
+
+        GTRecipeTypes.ASSEMBLY_LINE_RECIPES.recipeBuilder(GTExtra.id("me_super_pattern_buffer"))
+        .inputItems(ChemicalHelper.get(TagPrefix.cableGtSingle, GTMaterials.Europium), 32)
+        .inputItems(ChemicalHelper.get(TagPrefix.gear, GTMaterials.Tritanium), 8)
+        .inputItems(GTAEMachines.ME_PATTERN_BUFFER, 2)
+        .inputItems(CustomTags.UHV_CIRCUITS, 4)
+        .outputItems(GTExtraAEMachines.ME_SUPER_PATTERN_BUFFER.asStack(), 1)
+        .EUt(GTValues.VA[GTValues.UV])
+        .duration(500)
+        .stationResearch(b -> b
+            .researchStack(GTAEMachines.ME_PATTERN_BUFFER_PROXY.asStack())
+            .CWUt(16)
+            .EUt(GTValues.VA[GTValues.UV])
+        )
         .save(provider);
     }
 }
