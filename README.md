@@ -18,7 +18,7 @@ Special Thanks & Upstream Projects
      amazing open-source work.
 
 2. Applied Energistics 2 (AE2)
-   - AlgorithmX2, FireBall & The AE2 Team
+   - Thanks for the AE2 Team
    - Repository: https://github.com/AppliedEnergistics/Applied-Energistics-2
    - Credits: For providing the core grid automation interfaces and pattern 
      handling logic that allows this Super Pattern Buffer to exist.

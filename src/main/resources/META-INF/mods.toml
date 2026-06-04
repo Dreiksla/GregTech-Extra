@@ -4,7 +4,7 @@ license="LGPLv3.0"
 
 [[mods]]
 modId="gtextra"
-version="1.0.0"
+version="1.1.0"
 displayName="GregTech Modern: Extra"
 authors="Dreiksla"
 description="A mod that adds new multiblocks, machines and materials to GregTech Modern"
